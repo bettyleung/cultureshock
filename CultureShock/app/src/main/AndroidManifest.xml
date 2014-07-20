@@ -38,6 +38,8 @@
 
         <activity android:name="com.angelhacks.cultureshock.signup_f" >
         </activity>
+        <activity android:name="com.angelhacks.cultureshock.Country_Activity" >
+        </activity>
 
 
     </application>

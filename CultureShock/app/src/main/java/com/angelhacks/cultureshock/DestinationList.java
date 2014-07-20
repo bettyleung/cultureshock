@@ -67,37 +67,31 @@ public class DestinationList extends ActionBarActivity {
         listDataChild = new HashMap<String, List<String>>();
 
         // Adding child data
-        listDataHeader.add("Top 250");
-        listDataHeader.add("Now Showing");
-        listDataHeader.add("Coming Soon..");
+        listDataHeader.add("DINING");
+        listDataHeader.add("COMMUNICATION");
+        listDataHeader.add("SPECIAL_OCCASIONS");
+        listDataHeader.add("TRANSIT");
+        listDataHeader.add("BUSINESS");
+
 
         // Adding child data
-        List<String> top250 = new ArrayList<String>();
-        top250.add("The Shawshank Redemption");
-        top250.add("The Godfather");
-        top250.add("The Godfather: Part II");
-        top250.add("Pulp Fiction");
-        top250.add("The Good, the Bad and the Ugly");
-        top250.add("The Dark Knight");
-        top250.add("12 Angry Men");
+        List<String> DINING= new ArrayList<String>();
+        DINING.add("Food");
+        DINING.add("Etiquette");
 
-        List<String> nowShowing = new ArrayList<String>();
-        nowShowing.add("The Conjuring");
-        nowShowing.add("Despicable Me 2");
-        nowShowing.add("Turbo");
-        nowShowing.add("Grown Ups 2");
-        nowShowing.add("Red 2");
-        nowShowing.add("The Wolverine");
+        List<String> COMMUNICATION = new ArrayList<String>();
 
-        List<String> comingSoon = new ArrayList<String>();
-        comingSoon.add("2 Guns");
-        comingSoon.add("The Smurfs 2");
-        comingSoon.add("The Spectacular Now");
-        comingSoon.add("The Canyons");
-        comingSoon.add("Europa Report");
 
-        listDataChild.put(listDataHeader.get(0), top250); // Header, Child data
-        listDataChild.put(listDataHeader.get(1), nowShowing);
-        listDataChild.put(listDataHeader.get(2), comingSoon);
+        List<String> SPECIAL_OCCASIONS = new ArrayList<String>();
+
+        List<String> TRANSIT= new ArrayList<String>();
+
+        List<String> BUSINESS = new ArrayList<String>();
+
+        listDataChild.put(listDataHeader.get(0), DINING); // Header, Child data
+        listDataChild.put(listDataHeader.get(1), COMMUNICATION);
+        listDataChild.put(listDataHeader.get(2), SPECIAL_OCCASIONS);
+        listDataChild.put(listDataHeader.get(2), TRANSIT);
+        listDataChild.put(listDataHeader.get(2), BUSINESS);
     }
 }

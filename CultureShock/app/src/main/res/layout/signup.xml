@@ -58,6 +58,7 @@
             android:padding="10dp"
             android:layout_margin="4dp"
             android:text="Sign Up"
+            android:onClick="sendMsg"
             />
     </LinearLayout>
 

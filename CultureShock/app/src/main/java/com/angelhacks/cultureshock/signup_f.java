@@ -33,7 +33,7 @@ public class signup_f extends Activity {
 
     public void sendMsg(View view) {
         // Do something in response to button
-        Intent intent = new Intent(this, DestinationList.class);
+        Intent intent = new Intent(this, Country_Activity.class);
         startActivity(intent);
     }
 

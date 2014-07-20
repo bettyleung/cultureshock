@@ -1,16 +1,21 @@
 package com.angelhacks.cultureshock;
 
 import android.app.Activity;
+import android.content.Context;
 import android.content.pm.ActivityInfo;
 import android.os.Bundle;
 import android.view.Window;
 import android.view.WindowManager;
 import android.content.Intent;
 import android.view.View;
+import android.widget.Button;
+
 /**
  * Created by Spicycurryman on 7/19/14.
  */
-public class signup_e extends Activity {
+public class Country_Activity extends Activity {
+
+    private Button gotocountrybutton;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -19,7 +24,9 @@ public class signup_e extends Activity {
         getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,WindowManager.LayoutParams.FLAG_FULLSCREEN);
         setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
 
-        setContentView(R.layout.signup);
+        setContentView(R.layout.country_list);
+
+        addListenerOnButton();
 
 
 
@@ -29,10 +36,24 @@ public class signup_e extends Activity {
 
 
 
-    public void sendMsg(View view) {
-        // Do something in response to button
-        Intent intent = new Intent(this, Country_Activity.class);
-        startActivity(intent);
+    public void addListenerOnButton() {
+
+        final Context context = this;
+
+        gotocountrybutton = (Button) findViewById(R.id.country_button);
+
+        gotocountrybutton.setOnClickListener(new View.OnClickListener() {
+
+            @Override
+            public void onClick(View arg0) {
+
+                Intent intent = new Intent(context, DestinationList.class);
+                startActivity(intent);
+
+            }
+
+        });
+
     }
 
 }

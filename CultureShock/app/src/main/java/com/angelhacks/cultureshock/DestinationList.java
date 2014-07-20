@@ -1,5 +1,7 @@
 package com.angelhacks.cultureshock;
 
+import android.content.pm.ActivityInfo;
+import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.support.v7.app.ActionBarActivity;
 import android.view.Menu;
@@ -21,6 +23,16 @@ public class DestinationList extends ActionBarActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_destination_list);
+        setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
+
+
+        Drawable d=getResources().getDrawable(R.drawable.actionback1);
+        getActionBar().setBackgroundDrawable(d);
+
+        getActionBar().setDisplayShowTitleEnabled(false);
+
+
+
 
         // get the listview
         expListView = (ExpandableListView) findViewById(R.id.lvexp);

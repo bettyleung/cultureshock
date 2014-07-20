@@ -4,7 +4,7 @@
     android:layout_height="wrap_content"
     android:orientation="vertical"
     android:padding="8dp"
-    android:background="@drawable/specialoccasion">
+    android:background="#D09E2A">
 
 
     <TextView
@@ -13,6 +13,7 @@
         android:layout_height="wrap_content"
         android:paddingLeft="?android:attr/expandableListPreferredItemPaddingLeft"
         android:textSize="17sp"
+        android:drawableLeft="@drawable/specialish"
         android:textColor="#f9f93d" />
 
 </LinearLayout>

@@ -42,10 +42,12 @@ class UserSession {
         Map<String, Object> json = new HashMap<String, Object>();
 
         // TODO:
-        //   download http://mm-server.tk:3448/categories programatically
+        //   download http://mm-server.tk:3448/countries/categories programatically
         //   process the JSON using gson 
         //   create and return a specialized object instead of a Map, if possible
 
         return json;
     }
+
+    // TODO: same thing as for getCategories() for getting tips
 }

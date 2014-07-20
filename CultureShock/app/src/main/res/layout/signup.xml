@@ -8,7 +8,7 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context=".MainActivity"
 
-    android:background="#ff7bff78">
+    android:background="@drawable/culturebackground1">
 
     <LinearLayout
         android:orientation="vertical"
@@ -22,7 +22,7 @@
             android:id="@+id/etEmail"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="@drawable/edittext_top_bg"
+            android:background="#bfd6d6d6"
             android:padding="10dp"
             android:hint="Email"
             android:textColorHint="#ff040404"
@@ -30,18 +30,19 @@
         <EditText
             android:id="@+id/etUserName"
             android:layout_width="match_parent"
+            android:background="#bfd6d6d6"
+
             android:layout_height="wrap_content"
-           android:layout_marginTop="-2dp"
+            android:layout_marginTop="-2dp"
             android:padding="10dp"
             android:hint="User Name"
             android:textColorHint="#ff060606"
-            android:textColor="#FFFFFF"
             android:drawableLeft="@drawable/user"/>
         <EditText
             android:id="@+id/etPass"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="@drawable/edittext_bottom_bg"
+            android:background="#bfd6d6d6"
             android:layout_marginTop="-2dp"
             android:padding="10dp"
             android:hint="Password"
@@ -52,10 +53,11 @@
             android:id="@+id/btnSingIn"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:background="#bfd60d1b"
+
             android:padding="10dp"
             android:layout_margin="4dp"
             android:text="Sign Up"
-            android:background="@drawable/"
             />
     </LinearLayout>
 

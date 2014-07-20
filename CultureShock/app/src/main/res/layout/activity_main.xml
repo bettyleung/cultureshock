@@ -13,7 +13,7 @@
 
     <Button
 
-        android:id="@+id/button"
+        android:id="@+id/sign_email_button"
         android:background="@drawable/emailbutton"
         android:layout_height="150dp"
         android:layout_width="550dp"
@@ -25,9 +25,9 @@
         android:layout_height="150dp"
         android:layout_width="550dp"
         android:background="@drawable/emailfb"
-        android:id="@+id/button2"
+        android:id="@+id/sign_fb_button"
         android:layout_marginTop="130dp"
-        android:layout_alignTop="@+id/button"
-        android:layout_alignLeft="@+id/button"
-        android:layout_alignStart="@+id/button" />
+        android:layout_alignTop="@+id/sign_email_button"
+        android:layout_alignLeft="@+id/sign_email_button"
+        android:layout_alignStart="@+id/sign_email_button" />
 </RelativeLayout>

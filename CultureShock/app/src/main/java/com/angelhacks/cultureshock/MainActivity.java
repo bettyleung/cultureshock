@@ -1,15 +1,22 @@
 package com.angelhacks.cultureshock;
 
+import android.content.Context;
+import android.content.Intent;
 import android.content.pm.ActivityInfo;
-import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
+import android.support.v7.app.ActionBarActivity;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
+import android.widget.Button;
 
 
-public class MainActivity extends ActionBarActivity {
+public class MainActivity extends ActionBarActivity  {
+
+    Button emailbutton, facebookbutton;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -19,6 +26,16 @@ public class MainActivity extends ActionBarActivity {
         setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
 
         setContentView(R.layout.activity_main);
+
+
+
+
+        addListenerOnButton();
+        addListenerOnButton2();
+
+
+
+
     }
 
 
@@ -40,4 +57,46 @@ public class MainActivity extends ActionBarActivity {
         }
         return super.onOptionsItemSelected(item);
     }
+
+    public void addListenerOnButton() {
+
+        final Context context = this;
+
+         emailbutton = (Button) findViewById(R.id.sign_email_button);
+
+        emailbutton.setOnClickListener(new View.OnClickListener() {
+
+            @Override
+            public void onClick(View arg0) {
+
+                Intent intent = new Intent(context, signup_e.class);
+                startActivity(intent);
+
+            }
+
+        });
+
+    }
+
+    public void addListenerOnButton2() {
+
+        final Context context = this;
+
+        facebookbutton = (Button) findViewById(R.id.sign_fb_button);
+
+        facebookbutton.setOnClickListener(new View.OnClickListener() {
+
+            @Override
+            public void onClick(View arg0) {
+
+                Intent intent = new Intent(context, signup_e.class);
+                startActivity(intent);
+
+            }
+
+        });
+
+    }
+
+
 }

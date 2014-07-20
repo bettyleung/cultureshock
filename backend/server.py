@@ -20,7 +20,7 @@ def main():
         print "Running in debug mode"
         app.debug = True
     print "Server is available externally"
-    app.run("0.0.0.0")
+    app.run("0.0.0.0", port=3448)
 
 
 if __name__ == "__main__":

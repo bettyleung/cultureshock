@@ -9,7 +9,7 @@ import android.view.WindowManager;
 /**
  * Created by Spicycurryman on 7/19/14.
  */
-public class signup_e extends Activity {
+public class signup_f extends Activity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -18,13 +18,15 @@ public class signup_e extends Activity {
         getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,WindowManager.LayoutParams.FLAG_FULLSCREEN);
         setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
 
-        setContentView(R.layout.signup);
+        setContentView(R.layout.signupfb);
+
+
+
+
 
 
 
     }
-
-
 
 
 

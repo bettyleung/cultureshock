@@ -20,6 +20,9 @@
         <activity android:name="com.angelhacks.cultureshock.signup_e" >
         </activity>
 
+        <activity android:name="com.angelhacks.cultureshock.signup_f" >
+        </activity>
+
     </application>
 
 </manifest>

@@ -89,7 +89,7 @@ public class MainActivity extends ActionBarActivity  {
             @Override
             public void onClick(View arg0) {
 
-                Intent intent = new Intent(context, signup_e.class);
+                Intent intent = new Intent(context, signup_f.class);
                 startActivity(intent);
 
             }

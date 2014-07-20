@@ -5,7 +5,8 @@ import android.content.pm.ActivityInfo;
 import android.os.Bundle;
 import android.view.Window;
 import android.view.WindowManager;
-
+import android.content.Intent;
+import android.view.View;
 /**
  * Created by Spicycurryman on 7/19/14.
  */
@@ -27,5 +28,11 @@ public class signup_e extends Activity {
 
 
 
+
+    public void sendMsg(View view) {
+        // Do something in response to button
+        Intent intent = new Intent(this, DestinationList.class);
+        startActivity(intent);
+    }
 
 }

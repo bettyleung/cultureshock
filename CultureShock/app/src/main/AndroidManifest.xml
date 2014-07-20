@@ -16,12 +16,28 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-
-        <activity android:name="com.angelhacks.cultureshock.signup_e" >
+        <activity android:name=".signup_e" >
+        </activity>
+        <activity
+            android:name=".DestinationList"
+            android:label="@string/title_activity_destination_list"
+            android:parentActivityName=".MainActivity" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.angelhacks.cultureshock.MainActivity" />
+        </activity>
+        <activity
+            android:name=".Categories"
+            android:label="@string/title_activity_categories"
+            android:parentActivityName=".DestinationList" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.angelhacks.cultureshock.DestinationList" />
         </activity>
 
         <activity android:name="com.angelhacks.cultureshock.signup_f" >
         </activity>
+
 
     </application>
 

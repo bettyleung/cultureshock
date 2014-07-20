@@ -1,91 +1,13 @@
-RESULTS = {
-    "Food/Dining": {
-        "Fine": [
-            {
-                "tip": "The honoured guest or the eldest is the first person to begin eating.",
-                "likers": 0,
-                "dislikers": 0,
-                "tags": ["Food/Dining", "Fine Dining", "Social"]
-            },
-            {
-                "tip": "Never point your chopsticks. Do not pierce your food with chopsticks.",
-                "likers": 0,
-                "dislikers": 0,
-                "tags": ["Food/Dining", "Fine Dining", "Social"]
-            }
-        ],
-        "Casual": [
-            {
-                "tip": "Don't be surprised if your Japanese colleagues slurp their noodles and soup.",
-                "likers": 0,
-                "dislikers": 0,
-                "tags": ["Food/Dining", "Casual Dining", "Social"]
-            }
-        ]
-    },
-    "Special Occasions": {
-        "Holidays": [
-            {
-                "tip": "<a holiday tip>",
-                "likers": 0,
-                "dislikers": 0,
-                "tags": ["Special Occasions", "Holidays"]
-            }
-        ],
-        "Weddings": [
-            {
-                "tip": "<a wedding tip>",
-                "likers": 0,
-                "dislikers": 0,
-                "tags": ["Special Occasions", "Weddings"]
-            },
-        ],
-    },
-    "Transit": {
-        "Public": [
-            {
-                "tip": "<a public transit tip>",
-                "likers": 0,
-                "dislikers": 0,
-                "tags": ["Transit", "Public"]
-            },
-        ],
-        "Private": [
-            {
-                "tip": "<a private transit tip>",
-                "likers": 0,
-                "dislikers": 0,
-                "tags": ["Transit", "Private"]
-            },
-        ],
-    },
-    "Business": [
-        {
-            "tip": "One way to build and maintain relationships is with greetings / seasonal cards. It is important to be a good correspondent as the Japanese hold this in high esteem.",
-            "likers": 0,
-            "dislikers": 0,
-            "tags": ["Business"]
-        },
-        {
-            "tip": "Appointments are required and, whenever possible, should be made several weeks in advance.",
-            "likers": 0,
-            "dislikers": 0,
-            "tags": ["Business"]
-        },
-        {
-            "tip": "It is best to telephone for an appointment rather than send a letter, fax or email.",
-            "likers": 0,
-            "dislikers": 0,
-            "tags": ["Business"]
-        },
-        {
-            "tip": "Punctuality is important. Arrive on time for meetings and expect your Japanese colleagues will do the same.",
-            "likers": 0,
-            "dislikers": 0,
-            "tags": ["Business"]
-        },
-    ]
-}
+from itertools import chain
+import json
+
+'''
+TODO: tags should probably be stored lowercase in a set, and Title Cased
+  on their way back to the user
+'''
+
+with open("mock_data.json") as f:
+    RESULTS = json.load(f)
 
 def get_categories():
     '''
@@ -100,3 +22,50 @@ def get_categories():
             categories[category] = subcategories.keys()
 
     return categories
+
+
+def get_tips(category=None, subcategory=None, tags=None):
+    '''
+    Returns a list of maps of the form
+    {"tip": "...", "likers": 0, "dislikers": 0, tags: ["..."]}
+    '''
+
+    if category is not None:
+        return _get_tips(RESULTS[category], subcategory, tags)
+
+    tips = []
+    for subcategories in RESULTS.itervalues():
+        new_tips = _get_tips(subcategories, subcategory, tags)
+        if new_tips is not None:
+            tips.extend(new_tips)
+
+    return tips
+
+
+def _get_tips(subcategories, subcategory, tags):
+    # there are no subcategories, just tips for this category
+    if isinstance(subcategories, list):
+        # if there are no subcategories, then we can't filter on them
+        if subcategory is not None:
+            return None
+        else:
+            return filter_tips(subcategories, tags)
+
+    if subcategory is not None:
+        tips = subcategories[subcategory]
+    else:
+        tips = chain(*subcategories.itervalues())
+
+    return filter_tips(tips, tags)
+
+
+def filter_tips(tips, tags):
+    if tags is None:
+        return tips
+
+    filtered_tips = []
+    for tip in tips:
+        if set(tags).issubset(set(tip["tags"])):
+            filtered_tips.append(tip)
+
+    return filtered_tips

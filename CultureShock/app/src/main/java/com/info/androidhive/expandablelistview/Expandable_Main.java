@@ -29,7 +29,7 @@ public class Expandable_Main extends ActionBarActivity {
         setContentView(R.layout.expandable_main);
 
         // get the listview
-        expListView = (ExpandableListView) findViewById(R.id.lvExp);
+        expListView = (ExpandableListView) findViewById(R.id.lvexp);
 
         // preparing list data
         prepareListData();

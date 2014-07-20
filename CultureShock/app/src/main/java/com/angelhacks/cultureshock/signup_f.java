@@ -1,8 +1,10 @@
 package com.angelhacks.cultureshock;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.content.pm.ActivityInfo;
 import android.os.Bundle;
+import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
 
@@ -26,6 +28,13 @@ public class signup_f extends Activity {
 
 
 
+    }
+
+
+    public void sendMsg(View view) {
+        // Do something in response to button
+        Intent intent = new Intent(this, DestinationList.class);
+        startActivity(intent);
     }
 
 

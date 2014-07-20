@@ -1,0 +1,88 @@
+{
+    "Food/Dining": {
+        "Fine": [
+            {
+                "tip": "The honoured guest or the eldest is the first person to begin eating.",
+                "likers": 0,
+                "dislikers": 0,
+                "tags": ["food", "dining", "fine dining", "social"]
+            },
+            {
+                "tip": "Never point your chopsticks. Do not pierce your food with chopsticks.",
+                "likers": 0,
+                "dislikers": 0,
+                "tags": ["food", "dining", "fine dining", "social"]
+            }
+        ],
+        "Casual": [
+            {
+                "tip": "Don't be surprised if your Japanese colleagues slurp their noodles and soup.",
+                "likers": 0,
+                "dislikers": 0,
+                "tags": ["food", "dining", "casual dining", "social"]
+            }
+        ]
+    },
+    "Special Occasions": {
+        "Holidays": [
+            {
+                "tip": "<a holiday tip>",
+                "likers": 0,
+                "dislikers": 0,
+                "tags": ["special occasions", "holidays"]
+            }
+        ],
+        "Weddings": [
+            {
+                "tip": "<a wedding tip>",
+                "likers": 0,
+                "dislikers": 0,
+                "tags": ["special occasions", "weddings"]
+            }
+        ]
+    },
+    "Transit": {
+        "Public": [
+            {
+                "tip": "<a public transit tip>",
+                "likers": 0,
+                "dislikers": 0,
+                "tags": ["transit", "public"]
+            }
+        ],
+        "Private": [
+            {
+                "tip": "<a private transit tip>",
+                "likers": 0,
+                "dislikers": 0,
+                "tags": ["transit", "private"]
+            }
+        ]
+    },
+    "Business": [
+        {
+            "tip": "One way to build and maintain relationships is with greetings / seasonal cards. It is important to be a good correspondent as the Japanese hold this in high esteem.",
+            "likers": 0,
+            "dislikers": 0,
+            "tags": ["business"]
+        },
+        {
+            "tip": "Appointments are required and, whenever possible, should be made several weeks in advance.",
+            "likers": 0,
+            "dislikers": 0,
+            "tags": ["business"]
+        },
+        {
+            "tip": "It is best to telephone for an appointment rather than send a letter, fax or email.",
+            "likers": 0,
+            "dislikers": 0,
+            "tags": ["business", "communication"]
+        },
+        {
+            "tip": "Punctuality is important. Arrive on time for meetings and expect your Japanese colleagues will do the same.",
+            "likers": 0,
+            "dislikers": 0,
+            "tags": ["business", "punctuality"]
+        }
+    ]
+}

@@ -3,20 +3,19 @@ package com.angelhacks.cultureshock;
 /**
  * Created by syeda on 7/19/14.
  */
-import java.util.HashMap;
-import java.util.List;
-import java.util.ArrayList;
-
 import android.content.Context;
-import android.graphics.Typeface;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseExpandableListAdapter;
 import android.widget.TextView;
-import android.content.Intent;
+
+import java.util.HashMap;
+import java.util.List;
 
 public class MyExpandableListAdapter extends BaseExpandableListAdapter {
+
+    //   static int count = 0;
 
     private Context _context;
     private List<String> _listDataHeader; // header titles
@@ -24,7 +23,7 @@ public class MyExpandableListAdapter extends BaseExpandableListAdapter {
     private HashMap<String, List<String>> _listDataChild;
 
     public MyExpandableListAdapter(Context context, List<String> listDataHeader,
-                                 HashMap<String, List<String>> listChildData) {
+                                   HashMap<String, List<String>> listChildData) {
         this._context = context;
         this._listDataHeader = listDataHeader;
         this._listDataChild = listChildData;
@@ -85,17 +84,69 @@ public class MyExpandableListAdapter extends BaseExpandableListAdapter {
     public View getGroupView(int groupPosition, boolean isExpanded,
                              View convertView, ViewGroup parent) {
         String headerTitle = (String) getGroup(groupPosition);
-        if (convertView == null) {
-            LayoutInflater infalInflater = (LayoutInflater) this._context
-                    .getSystemService(Context.LAYOUT_INFLATER_SERVICE);
-            convertView = infalInflater.inflate(R.layout.list_group, null);
+
+        if(headerTitle.equals("DINING")) {
+            if (convertView == null) {
+                LayoutInflater infalInflater = (LayoutInflater) this._context
+                        .getSystemService(Context.LAYOUT_INFLATER_SERVICE);
+                convertView = infalInflater.inflate(R.layout.list_group, null);
+            }
+
+            TextView lblListHeader = (TextView) convertView
+                    .findViewById(R.id.lblListHeader);
+            //lblListHeader.setTypeface(null, Typeface.BOLD);
+            // lblListHeader.setText(headerTitle);
+        }
+        if(headerTitle.equals("COMMUNICATION")) {
+            if (convertView == null) {
+                LayoutInflater infalInflater = (LayoutInflater) this._context
+                        .getSystemService(Context.LAYOUT_INFLATER_SERVICE);
+                convertView = infalInflater.inflate(R.layout.list_group1, null);
+            }
+
+            TextView lblListHeader = (TextView) convertView
+                    .findViewById(R.id.lblListHeader1);
+            // lblListHeader.setTypeface(null, Typeface.BOLD);
+            //  lblListHeader.setText(headerTitle);
+        }
+        if(headerTitle.equals("SPECIAL OCCASIONS")) {
+            if (convertView == null) {
+                LayoutInflater infalInflater = (LayoutInflater) this._context
+                        .getSystemService(Context.LAYOUT_INFLATER_SERVICE);
+                convertView = infalInflater.inflate(R.layout.list_group2, null);
+            }
+
+            TextView lblListHeader = (TextView) convertView
+                    .findViewById(R.id.lblListHeader2);
+            // lblListHeader.setTypeface(null, Typeface.BOLD);
+            // lblListHeader.setText(headerTitle);
+        }
+        if(headerTitle.equals("TRANSIT")) {
+            if (convertView == null) {
+                LayoutInflater infalInflater = (LayoutInflater) this._context
+                        .getSystemService(Context.LAYOUT_INFLATER_SERVICE);
+                convertView = infalInflater.inflate(R.layout.list_group3, null);
+            }
+
+            TextView lblListHeader = (TextView) convertView
+                    .findViewById(R.id.lblListHeader3);
+            //  lblListHeader.setTypeface(null, Typeface.BOLD);
+            // lblListHeader.setText(headerTitle);
+        }
+        if (headerTitle.equals("BUSINESS")){
+            if (convertView == null) {
+                LayoutInflater infalInflater = (LayoutInflater) this._context
+                        .getSystemService(Context.LAYOUT_INFLATER_SERVICE);
+                convertView = infalInflater.inflate(R.layout.list_group4, null);
+            }
+
+            TextView lblListHeader = (TextView) convertView
+                    .findViewById(R.id.lblListHeader4);
+            //   lblListHeader.setTypeface(null, Typeface.BOLD);
+            //   lblListHeader.setText(headerTitle);
         }
 
-        TextView lblListHeader = (TextView) convertView
-                .findViewById(R.id.lblListHeader);
-        lblListHeader.setTypeface(null, Typeface.BOLD);
-        lblListHeader.setText(headerTitle);
-
+        //  count++;
         return convertView;
     }
 

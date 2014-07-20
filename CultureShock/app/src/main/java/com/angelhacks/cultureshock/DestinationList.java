@@ -64,29 +64,39 @@ public class DestinationList extends ActionBarActivity {
         // Adding child data
         listDataHeader.add("DINING");
         listDataHeader.add("COMMUNICATION");
-        listDataHeader.add("SPECIAL_OCCASIONS");
+        listDataHeader.add("SPECIAL OCCASIONS");
         listDataHeader.add("TRANSIT");
         listDataHeader.add("BUSINESS");
 
 
         // Adding child data
         List<String> DINING= new ArrayList<String>();
-        DINING.add("Food");
-        DINING.add("Etiquette");
+        DINING.add("Table Manners");
+        DINING.add("What to Bring");
+        DINING.add("Tips");
+
 
         List<String> COMMUNICATION = new ArrayList<String>();
+        COMMUNICATION.add("Verbal and Nonverbal Etiquette ");
+        COMMUNICATION.add("Facial Expressions and Body Language");
 
 
         List<String> SPECIAL_OCCASIONS = new ArrayList<String>();
+        SPECIAL_OCCASIONS.add("How to Dress");
+        SPECIAL_OCCASIONS.add("What to Buy and/or Bring");
 
         List<String> TRANSIT= new ArrayList<String>();
+        TRANSIT.add("How to Dress");
+        TRANSIT.add("What to Buy and/or Bring");
 
         List<String> BUSINESS = new ArrayList<String>();
+        BUSINESS.add("Relations and Business Communications");
+        BUSINESS.add("Business Meetings and Greetings");
 
         listDataChild.put(listDataHeader.get(0), DINING); // Header, Child data
         listDataChild.put(listDataHeader.get(1), COMMUNICATION);
         listDataChild.put(listDataHeader.get(2), SPECIAL_OCCASIONS);
-        listDataChild.put(listDataHeader.get(2), TRANSIT);
-        listDataChild.put(listDataHeader.get(2), BUSINESS);
+        listDataChild.put(listDataHeader.get(3), TRANSIT);
+        listDataChild.put(listDataHeader.get(4), BUSINESS);
     }
 }

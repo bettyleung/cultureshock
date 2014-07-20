@@ -26,7 +26,9 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="-2dp"
             android:padding="10dp"
-            android:hint="User Name"
+            android:hint="  User Name"
+            android:textColor="#ff0b0b0b"
+
             android:textColorHint="#ff060606"
             android:drawableLeft="@drawable/user"/>
         <EditText
@@ -35,8 +37,10 @@
             android:layout_height="wrap_content"
             android:background="#bfffffff"
             android:layout_marginTop="-2dp"
+            android:textColor="#ff0b0b0b"
+
             android:padding="10dp"
-            android:hint="Password"
+            android:hint=" Password"
             android:textColorHint="#ff020202"
             android:password="true"
             android:drawableLeft="@drawable/lock"/>
@@ -45,10 +49,11 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="#bf1b1ad6"
-
+            android:onClick="sendMsg"
             android:padding="10dp"
             android:layout_margin="4dp"
             android:text="Sign Up"/>
+
     </LinearLayout>
 
 </RelativeLayout>

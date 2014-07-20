@@ -23,18 +23,21 @@
             android:layout_height="wrap_content"
             android:background="#bfd6d6d6"
             android:padding="10dp"
-            android:hint="Email"
+            android:hint="  Email"
             android:textColorHint="#ff040404"
+            android:textColor="#ff0b0b0b"
+
             android:drawableLeft="@drawable/email"/>
         <EditText
             android:id="@+id/etUserName"
             android:layout_width="match_parent"
             android:background="#bfd6d6d6"
-
             android:layout_height="wrap_content"
             android:layout_marginTop="-2dp"
             android:padding="10dp"
-            android:hint="User Name"
+            android:hint="  User Name"
+            android:textColor="#ff0b0b0b"
+
             android:textColorHint="#ff060606"
             android:drawableLeft="@drawable/user"/>
         <EditText
@@ -44,15 +47,16 @@
             android:background="#bfd6d6d6"
             android:layout_marginTop="-2dp"
             android:padding="10dp"
-            android:hint="Password"
+            android:hint=" Password"
             android:textColorHint="#ff020202"
+            android:textColor="#ff0b0b0b"
             android:password="true"
             android:drawableLeft="@drawable/lock"/>
         <Button
             android:id="@+id/btnSingIn"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="#bfd60d1b"
+            android:background="#ffd60d1b"
             android:padding="10dp"
             android:layout_margin="4dp"
             android:text="Sign Up"

@@ -46,6 +46,15 @@ class UserSession {
         //   process the JSON using gson 
         //   create and return a specialized object instead of a Map, if possible
 
+        /* Added by Syeda. Needs to be modified 
+        URL url = new URL("http://mm-server.tk:3448/countries/categories");
+		URLConnection conn = url.openConnection();
+
+		DocumentBuilderFactory factory = DocumentBuilderFactory.newInstance();
+		DocumentBuilder builder = factory.newDocumentBuilder();
+		Document doc = builder.parse(conn.getInputStream());
+
+		*/
         return json;
     }
 
